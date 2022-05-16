@@ -83,5 +83,6 @@ btnBonus.addEventListener("click", () => {
         boost = false;
         clearInterval(countdown);
         secondsRemainingEl.parentElement.style.opacity = "0";
+        secondsRemaining = 30;
     }, 30000)
 })
