@@ -1,5 +1,6 @@
 # Cookie counter application
-Description: small application for the BeCode webdevelopment course
+Description: small application for the BeCode webdevelopment course<br>
+Link: https://jelle-vdp.github.io/js-cookie-counter/
 
 Instructions:
 
