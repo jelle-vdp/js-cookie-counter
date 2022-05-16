@@ -21,8 +21,8 @@ body {
 
 main {
     margin:auto;
-    min-width: 600px;
-    max-height:500px;
+    max-width: 1000px;
+    width:100%;
     background: $color-black;
     color: $color;
     padding:2rem;
@@ -30,6 +30,16 @@ main {
     flex-direction: column;
     text-align:center;
     line-height: 1.7;
+    border-radius: 1rem;
+
+        @media (max-width:1040px){
+            margin: auto 20px;
+        }
+
+
+    h1 {
+        line-height:1.1;
+    }
 
     #score {
         font-size:4rem;
@@ -39,17 +49,52 @@ main {
     .buttons-wrapper {
         display:flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width:600px){
+            flex-direction:column;
+        }
 
         .buttons-wrapper__button {
             display:flex;
             flex-direction: column;
-            width:24%;
+
+            @media (min-width:1040px){
+                width:calc(25% - 4rem);
+            }
+            
+
+            @media (max-width:1040px) and (min-width:600px){
+                width:calc(50% - 1rem);
+
+                
+                &:nth-child(1), &:nth-child(2) {
+                    margin-bottom:2rem;
+                }
+            }
+
+            @media (max-width:600px){
+                &:not(:last-child){
+                    margin-bottom:2rem;
+                }
+            }
 
             button {
                 padding:0.7rem 0.5rem;
                 display: inline-block;
                 margin:0 auto 1rem auto;
+                border-radius: 0.5rem;
                 cursor: pointer;
+                border-width: 0px;
+
+                &:not(:disabled):hover {
+                    background: darken($color, 20%);
+                }
+
+                &:disabled {
+                    color: darken($color, 30%);
+                    cursor: not-allowed;
+                }
             }
 
             > span {
@@ -57,15 +102,6 @@ main {
 
                 &:not(:last-child){
                     margin-bottom:0.5rem;
-                }
-            }
-
-            &.buttons-wrapper__button--disabled {
-                opacity:0.5;
-
-                button {
-                    cursor:not-allowed;
-                    color:#fff;
                 }
             }
         }

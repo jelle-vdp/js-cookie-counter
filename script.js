@@ -1,4 +1,5 @@
 let score = 0;
+let boost = false;
 
 const scoreEl = document.getElementById("score");
 
@@ -11,32 +12,24 @@ const costMultiplyEl = document.getElementById("cost-multiply");
 
 let costMultiply = +costMultiplyEl.innerText;
 
-let boost = false;
-
 const updateScore = () => {
         scoreEl.innerText = score;
 
     if  (score >= costMultiply){
-        btnMultiply.parentElement.classList.remove("buttons-wrapper__button--disabled");
         btnMultiply.disabled = false;
     } else {
-        btnMultiply.parentElement.classList.add("buttons-wrapper__button--disabled");
         btnMultiply.disabled = true;
     }
     
     if  (score >= 50){
-        btnAutoclick.parentElement.classList.remove("buttons-wrapper__button--disabled");
         btnAutoclick.disabled = false;
     } else {
-        btnAutoclick.parentElement.classList.add("buttons-wrapper__button--disabled");
         btnAutoclick.disabled = true;
     }
     
     if  (score >= 100){
-        btnBonus.parentElement.classList.remove("buttons-wrapper__button--disabled");
         btnBonus.disabled = false;
     } else {
-        btnBonus.parentElement.classList.add("buttons-wrapper__button--disabled");
         btnBonus.disabled = true;
     }
 }
