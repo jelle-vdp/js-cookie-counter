@@ -54,6 +54,11 @@ main #score {
   font-weight: 800;
 }
 
+main .bonus-feature {
+  margin-bottom: 3rem;
+  opacity: 0;
+}
+
 main .buttons-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

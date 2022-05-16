@@ -46,6 +46,11 @@ main {
         font-weight: 800;
     }
 
+    .bonus-feature {
+        margin-bottom: 3rem;
+        opacity:0;
+    }
+
     .buttons-wrapper {
         display:flex;
         justify-content: space-between;

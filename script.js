@@ -1,5 +1,6 @@
 let score = 0;
 let boost = false;
+let secondsRemaining = 30;
 
 const scoreEl = document.getElementById("score");
 
@@ -9,6 +10,7 @@ const btnAutoclick = document.getElementById("btn-autoclick");
 const btnBonus = document.getElementById("btn-bonus");
 
 const costMultiplyEl = document.getElementById("cost-multiply");
+const secondsRemainingEl = document.querySelector(".bonus-feature span");
 
 let costMultiply = +costMultiplyEl.innerText;
 
@@ -70,7 +72,16 @@ btnAutoclick.addEventListener("click", () => {
 
 btnBonus.addEventListener("click", () => {
     boost = true;
+    secondsRemainingEl.parentElement.style.opacity = "100";
+    
+    const countdown = setInterval(() => {
+        secondsRemaining--;
+        secondsRemainingEl.innerText = secondsRemaining;
+    }, 1000)
+
     setTimeout(()  => {
         boost = false;
+        clearInterval(countdown);
+        secondsRemainingEl.parentElement.style.opacity = "0";
     }, 30000)
 })
