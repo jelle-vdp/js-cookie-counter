@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  margin: auto;
+  min-width: 600px;
+  max-height: 500px;
+  background: #333;
+  color: white;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  line-height: 1.7;
+}
+
+main #score {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+main .buttons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .buttons-wrapper .buttons-wrapper__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 24%;
+}
+
+main .buttons-wrapper .buttons-wrapper__button button {
+  padding: 0.7rem 0.5rem;
+  display: inline-block;
+  margin: 0 auto 1rem auto;
+  cursor: pointer;
+}
+
+main .buttons-wrapper .buttons-wrapper__button > span {
+  font-size: 0.7rem;
+}
+
+main .buttons-wrapper .buttons-wrapper__button > span:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+main .buttons-wrapper .buttons-wrapper__button.buttons-wrapper__button--disabled {
+  opacity: 0.5;
+}
+
+main .buttons-wrapper .buttons-wrapper__button.buttons-wrapper__button--disabled button {
+  cursor: not-allowed;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

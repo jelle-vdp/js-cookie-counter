@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Cookie counter</h1>
+        <p id="score">0</p>
+        <div class="buttons-wrapper">
+            <div class="buttons-wrapper__button">
+                <button id="btn-count">
+                    Count
+                </button>
+                <span class="btn-explanation">Adds 1 to the current score</span>
+            </div>
+            <div class="buttons-wrapper__button buttons-wrapper__button--disabled">
+                <button id="btn-multiply" disabled>
+                Multiply
+                </button>
+                <span class="btn-cost">You can buy this feature for <span id="cost-multiply">10</span> cookies</span>
+                <span class="btn-explanation">Multiplies your current score by 2</span>
+            </div>
+            <div class="buttons-wrapper__button buttons-wrapper__button--disabled">
+                <button id="btn-autoclick">
+                    Autoclick
+                </button>
+                <span class="btn-cost">You can buy this feature for 50 cookies</span>
+                <span class="btn-explanation">Automaticly adds a click every 30 seconds</span>
+            </div>
+            <div class="buttons-wrapper__button buttons-wrapper__button--disabled">
+                <button id="btn-bonus">
+                    Bonus
+                </button>
+                <span class="btn-cost">You can buy this feature for 100 cookies</span>
+                <span class="btn-explanation">For the next 30 seconds each click will result in a 200% increase of your score</span>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
