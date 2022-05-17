@@ -71,6 +71,8 @@ btnAutoclick.addEventListener("click", () => {
 });
 
 btnBonus.addEventListener("click", () => {
+    score = score - 100;
+    updateScore();
     boost = true;
     secondsRemainingEl.parentElement.style.opacity = "1";
     
