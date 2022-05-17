@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 
-$color : white;
-$color-black : #333;
+$c-light : #BFD7EA;
+$c-dark : #0B3954;
+$c-gray: #CBD2D0;
+$c-special: #C2E7DA;
 
 * {
     margin:0;
@@ -11,7 +13,7 @@ $color-black : #333;
 }
 
 body {
-    background: $color;
+    background: $c-light;
     display:flex;
     font-family: 'Montserrat', sans-serif;
     align-content: center;
@@ -23,8 +25,8 @@ main {
     margin:auto;
     max-width: 1000px;
     width:100%;
-    background: $color-black;
-    color: $color;
+    background: $c-dark;
+    color: $c-light;
     padding:2rem;
     display:flex;
     flex-direction: column;
@@ -36,6 +38,9 @@ main {
             margin: auto 20px;
         }
 
+        @media (max-width:600px){
+            margin: 20px;
+        }
 
     h1 {
         line-height:1.1;
@@ -91,13 +96,16 @@ main {
                 border-radius: 0.5rem;
                 cursor: pointer;
                 border-width: 0px;
+                background: $c-light;
+                color: $c-dark;
 
                 &:not(:disabled):hover {
-                    background: darken($color, 20%);
+                    background: darken($c-light, 5%);
                 }
 
                 &:disabled {
-                    color: darken($color, 30%);
+                    background: lighten($c-light, 50%);
+                    color: $c-light;
                     cursor: not-allowed;
                 }
             }

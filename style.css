@@ -7,7 +7,7 @@
 }
 
 body {
-  background: white;
+  background: #BFD7EA;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,8 +24,8 @@ main {
   margin: auto;
   max-width: 1000px;
   width: 100%;
-  background: #333;
-  color: white;
+  background: #0B3954;
+  color: #BFD7EA;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,6 +45,12 @@ main {
   }
 }
 
+@media (max-width: 600px) {
+  main {
+    margin: 20px;
+  }
+}
+
 main h1 {
   line-height: 1.1;
 }
@@ -55,8 +61,8 @@ main #score {
 }
 
 main .bonus-feature {
-  margin-bottom: 3rem;
   opacity: 0;
+  margin-bottom: 2rem;
 }
 
 main .buttons-wrapper {
@@ -117,14 +123,17 @@ main .buttons-wrapper .buttons-wrapper__button button {
   border-radius: 0.5rem;
   cursor: pointer;
   border-width: 0px;
+  background: #BFD7EA;
+  color: #0B3954;
 }
 
 main .buttons-wrapper .buttons-wrapper__button button:not(:disabled):hover {
-  background: #cccccc;
+  background: #accbe4;
 }
 
 main .buttons-wrapper .buttons-wrapper__button button:disabled {
-  color: #b3b3b3;
+  background: white;
+  color: #BFD7EA;
   cursor: not-allowed;
 }
 
