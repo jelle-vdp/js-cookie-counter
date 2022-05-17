@@ -34,7 +34,7 @@ const updateScore = () => {
     } else {
         btnBonus.disabled = true;
     }
-}
+};
 
 btnIncrement.addEventListener("click", () => {
     if (boost){
@@ -43,7 +43,7 @@ btnIncrement.addEventListener("click", () => {
         score++;
     };
     updateScore();
-})
+});
 
 btnMultiply.addEventListener("click", () => {
     score = score - costMultiply;
@@ -55,7 +55,7 @@ btnMultiply.addEventListener("click", () => {
     costMultiply = costMultiply + 10;
     costMultiplyEl.innerText = costMultiply;
     updateScore();
-})
+});
 
 btnAutoclick.addEventListener("click", () => {
     score = score - 50;
@@ -68,21 +68,22 @@ btnAutoclick.addEventListener("click", () => {
         };
         updateScore();
     }, 3000);
-})
+});
 
 btnBonus.addEventListener("click", () => {
     boost = true;
-    secondsRemainingEl.parentElement.style.opacity = "100";
+    secondsRemainingEl.parentElement.style.opacity = "1";
     
     const countdown = setInterval(() => {
         secondsRemaining--;
         secondsRemainingEl.innerText = secondsRemaining;
-    }, 1000)
+    }, 1000);
 
     setTimeout(()  => {
         boost = false;
         clearInterval(countdown);
         secondsRemainingEl.parentElement.style.opacity = "0";
         secondsRemaining = 30;
-    }, 30000)
-})
+        secondsRemainingEl.innerText = secondsRemaining;
+    }, 30000);
+});
